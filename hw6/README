@@ -1,0 +1,63 @@
+Name: Sujatha Gopi
+
+The goal of this project is to design and implement a memory management module for our Operating System Simulator oss. we will implement the second-chance (clock) page replacement algorithm for page replacement. 
+
+Steps to compile and run:
+
+1. To compile : Type "make" in the directory where the project files and Makefile is present.
+2. I have 3 separate file oss.h, oss.c and user.c for this project. So either can type "make" or "make all"
+3. This will generate oss.o user.o and oss and user executable file
+4. Some possible ways to execute: Type ./oss
+ 		    ./oss -m
+		    ./oss -h 
+
+5. To see more options supported use: ./oss -h
+6. This project takes up one more option -m to decide the type of memory reference to be used by the child process
+6.a. I have kept the number of concurrent processes in the system as 18 by using define MACRO. I am not getting user input for this. 
+7. The log details are kept in file name output.log
+8. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git_log" 
+9. This project will generate 100 processes and use 18 Process control blocks. So at any time there can be only 18 concurrent child processes running. These are defined in oss.h as MAX_CONCURRENT and MAX_PROCESSES
+10. I have used message queues for synchronisation in this project. 
+
+Note on final report:
+-----------------------
+The project displays a mini report on the statistics. It shows the total number of proceses, Total simulation time taken for execution, Total number of memory accesses, Number of memory access per seconds, Number of page faults per memory access and Average memory access speed. These results are also added to the log file. 
+
+Notes on performance of the page replacement algorithm on both the page request schemes:
+---------------------------------------------------------------------------------------
+    After running multiple times and looking at the results of both the page request schemes, I feel that the memory reference type 2 ( 1/n weight scheme which favors certain pages over others) seems to have a better performance. Because, the results clearly shows that the 2nd mem reference type has 
+	* more number of memory access
+	* lesser number of page faults
+ 	* Lesser execution time
+when compared to the first type. So the 2nd type 1/n weight scheme seems to be best suited among the two types. 
+Also this type should be more suitable for real time world because the first type is very simple straight forward generation which does not make any improvement.
+
+An example output of both types below:
+Type 1 ( Normal generation using rand())
+----------------------------------------
+	Total number of proceses = 100
+	Total simulation time taken for execution = 222s.70028282ns
+	Total number of memory accesses  = 93781
+	Number of memory access per seconds  = 422
+	Total number of page faults  = 91335
+	Number of page faults per memory access  = 216
+	Average memory access speed = 0.002367
+
+Type 2 (1/n weight scheme which favors certain pages over others)
+-----------------------------------------------------------------
+	Total number of proceses = 100
+	Total simulation time taken for execution = 221s.339072651ns
+	Total number of memory accesses  = 92949
+	Number of memory access per seconds  = 420
+	Total number of page faults  = 86790
+	Number of page faults per memory access  = 206
+	Average memory access speed = 0.002378
+
+
+Notes on execution time:
+-----------------------
+    This project executes for more than 2 seconds. It almost runs for about 6 - 8 real time seconds due to the high number of memory references. 
+So please do not stop the program before 8 seconds. I have set the alarm signal to stop the program if it runs for more than 12 seconds. 
+
+Any known issues: Null

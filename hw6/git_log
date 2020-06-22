@@ -1,0 +1,35 @@
+commit 4f4262f1758c2a6113e7d669c22c6e38b347e2b2
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu May 7 02:24:40 2020 -0500
+
+    README
+
+commit d8d3f2bee3dade157bbc8e391f917d4001a45287
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu May 7 02:24:12 2020 -0500
+
+    1. Bug Fixing
+    2. Added final statistics
+    3. Added comments
+
+commit c57b44436a8a5d4a4fbbd953fd5752a273b2ba41
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Wed May 6 01:56:54 2020 -0500
+
+    1. Modified data structures in oss.h
+    2. Added memory management for read, write and terminate actions is oss.c
+    3. Added code to handle wait for device in oss.c
+    4. Added code for message queue to facilitate IPC
+    5. Added code for second chance replacement algorithm in oss.c
+    6. Added code to handle page replacement in oss.c
+    7. Code for two different types of memory reference in user.c
+    8. Code to request read/write/terminate from user
+
+commit fd53eb92971e0440082f7bbe945dd176f64ae4a6
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Apr 27 21:11:50 2020 -0500
+
+     1. Added Makefile
+    2. Added code for shared memory setup for clock
+    3. Added shared memory setup code in user.c
+    4. Code for signal handler and alarm handler
