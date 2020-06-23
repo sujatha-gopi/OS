@@ -1,0 +1,31 @@
+Name: Sujatha Gopi
+
+The goal of this project is to design and implement a resource management module.We will be using the deadlock detection and 
+recovery strategy to manage resources.
+
+Steps to compile and run:
+
+1. To compile : Type "make" in the directory where the project files and Makefile is present.
+2. I have 3 separate file oss.h, oss.c and user.c for this project. So either can type "make" or "make all"
+3. This will generate oss.o user.o and oss and user executable file
+4. Some possible ways to execute: Type ./oss
+ 		    ./oss -v
+		    ./oss -h 
+
+5. To see more options supported use: ./oss -h
+6. This project takes up one more option -v to support verbose logging 
+7. The log details are kept in file name output.log
+8. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git_log" 
+9. This project will generate 100 processes and use 18 Process control blocks. These are defined in oss.h as NUM_PCB and MAX_PROCESSES
+
+Note on final report:
+The project displays a mini report on the statistics. It shows the total number of proceses, Total process killed by deadlock algorithm, Total process that are terminated successfully, Number of times deadlock algorithm is run and Percentage of processes terminated by deadlock algorithm. These results are also added to the log file. 
+
+Notes on Deadlock detection algoithm and how is it resolved:
+    This deadlock detection algorithm is taken from the deadlock.pdf from class notes. It detects a process in deadlock whenever an outstanding request from the process is greater than the available resource. Those processes are deleted to clear the deadlock. Although at this point there is not a real deadlock. this scenario of requesting more resource than available can lead to a potential deadlock. Hence, those processes are deleted. All these details can be seen in the verbose mode of the output.log
+
+Termination of process by deadlock algorithm:
+    Deadlock algorithm will send  a kill signal to the processes that are identified as potential deadlocked process. The child process will receive this kill signal and its signal handler will get invoked. This signal handler will then send a termination request through the message queue to the oss. The child process will then go ahead will cleanup and send termination signal to parent. Oss after receiving the termination request from message queue, will wait for the termination of the child process and will then release all the allocated resources and add them to the corresponding available resources. 
+
+Any known issues: Null

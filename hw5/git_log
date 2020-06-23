@@ -1,0 +1,45 @@
+commit f3d39ba306ce28b282852532be840b97a2e84d8f
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Apr 20 22:56:09 2020 -0500
+
+    1. Code for printing final statistics
+    2. Code for alarm handler and sigint handler in oss.c
+    3. Final comments and bug fixing
+
+commit 2f2d351d4dee01f8600d3436d5feb5dd1d476911
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Apr 19 17:55:40 2020 -0500
+
+    1. Added code in oss.c and user.c to handle resource release
+    2. Added deadlock detection algorithm in oss.c
+    3. Code for using semaphore to increment the shared clock in oss.c amd user.c
+    4. Code to terminate the deadlocked process
+    5. Added code in oss.c to print the allocation matrix
+    6. Added signal handler in user.c to terminater and cleanup on CTRL C
+    7. Added code for verbose and non verbose printing
+
+commit fbef2129fdee8bb8a8a714973fee2f94851295ed
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Apr 13 02:14:29 2020 -0500
+
+    1. Added function to increment shared clockin oss.c
+    2. Added code to setup message queue in oss.c and user.c
+    3. Added code in user.c to send signal to oss for terminating and requesting resource
+    4. Added code in oss.c to handle termination and request resources from child
+    5. Modifies message queue data structures in oss.h
+
+commit cc3549ed13e8dec3e34f9da7999e165c47cb7aa8
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Apr 12 12:37:36 2020 -0500
+
+    Added system data structures, clock and resource descriptors data structures
+
+commit 90412dd26038cf02d58c5e0e0e7dbcdd57e9ab20
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Apr 12 12:36:53 2020 -0500
+
+    1. Added Makefile
+    2. Added code for shared memory setup for clock, pcb and resource descriptore
+    3. Added initialisation code for PCB and RD
+    4. Added code to spawn children in oss.c
+    5. Added shared memory setup code in user.c
