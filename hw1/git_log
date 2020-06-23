@@ -1,0 +1,53 @@
+commit 7406c58ee663b161f44c8f1fbae05857a6f5550b
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Feb 10 22:36:07 2020 -0600
+
+    1. Moved functions from bt.c bfs.c
+    2. Added bt.h to contain function declarations
+    3. Added comments to bfs.c and bt.c
+    4. Modified Makefile to include SUFFIX rule
+    5. Added code for following symbolic link in bfs.c
+    6. Added code for option s in bfs.c print function
+    7. Added README file
+
+commit 94ef23f36d5dc123ece6a78c114c6a9ae2173930
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Feb 10 01:18:34 2020 -0600
+
+    Changed the filename to bt.c
+    2. Modified Makefile with new file name bt.c
+    3. Debugging and code parts for case statement in print_properties function
+    4. Modified breadth_first function for correct BFS flow
+    5. Added code to read command line arg argv and help options
+
+commit 45b0902e5416a5e753550fd0c3ab7187d34688c7
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sat Feb 8 11:43:36 2020 -0600
+
+    Modified BFS and helper functions for enqueing, printing queue and dequeueing
+
+commit c6495ab7c871a5dbaa59e560832e84e3a1ea5660
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Wed Feb 5 08:03:48 2020 -0600
+
+    Added code section for Breadth First Traversal
+
+commit 998ec453c75bc0638705020f95f90711b549c322
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Feb 2 23:25:30 2020 -0600
+
+    Added code for printing file type, permissions, number of links
+
+commit f660ea5e6852ca554dd750b644e1407938338ddd
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Feb 2 00:42:34 2020 -0600
+
+    Added GID,UID and Last Modfification part
+    Added function called beadth_first
+    Added function called print_properties
+
+commit 801b12f6eb5c3b1078194e4b0a52b69f7791152a
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Fri Jan 31 23:31:14 2020 -0600
+
+    Added new file dt.c with initial code

@@ -1,0 +1,54 @@
+commit f5e7f4d0b66bd48016fdd9ffd32d24b2134ae513
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Apr 2 13:25:06 2020 -0500
+
+    1. Final bug fixing
+    2. Added comments
+
+commit 04b78630bc1bb82f24cf421b0bacd9d102a6255e
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Apr 2 09:20:06 2020 -0500
+
+    1. Modified processing for blocked PIDs
+    2. Addedfunction to calculate different total times for each process
+    3. Added code to calculate report on average wait time, average CPU utilization and average time a process waited in a blocked
+    4. Display final results and error fixing
+
+commit 8217fa5cf48a1a9ff06bd1c2835caeff0d9f6077
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Wed Apr 1 17:41:01 2020 -0500
+
+    1. Added code to calculate time for next process generation
+    2. Added code for adding timing for all processes and display final results
+    3. Added code for aging process
+
+commit 204c777d922f19e4d6a803eae7a17397005ab7bb
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Tue Mar 31 20:36:39 2020 -0500
+
+    1. Added code for blocked queue in oss.c
+    2. Added output log details
+    3. Added code for blocked and preempted functionality in oss.c
+    4. Added code for signal handler for CTRL+C and cleanup code
+    5. Changed PCB data structure in oss.h to reflect timing and new function to add item in the head of the queue
+    6. Added code in binary.c for calculating all timing for process and update shared memory
+
+commit 3d2de7a4d10a3e52d598a8d8e03d7fb2a3f8944a
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sat Mar 28 02:40:05 2020 -0500
+
+    1. Modified PCB data structure in oss.h
+    2. Added code to calculate burst time, wait time and run time in binary.c
+    3. Added code for message queue communication between oss and binary
+    4. Changed oss.c to reflect choice of binary and calculate timing as decided by binary
+
+commit 92d03af23b17f5954d56280f1a9d4067f8c6151c
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Mar 26 01:39:17 2020 -0500
+
+    1. Created Makefile
+    2. Created files oss.h, oss.c and binary.c
+    3. Added code to initialise shared memory, message queues and timer
+    4. Added code to create data structure for process control block and functions to initialse PCB
+    5. Added functions to implement queue
+    6. Added code to check the process decision to use full quantum time

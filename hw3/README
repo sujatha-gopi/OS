@@ -1,0 +1,50 @@
+Name: Sujatha Gopi
+
+The goal of this project is to compute the summation of n integers in two different ways and assess their performance. This project uses shared memory to communicate between parent and child processes. Semaphore is used to protect the critical resource which is adder_log file.
+Please see at the bottom of this README to see my notes on performance comparison.  
+
+Steps to compile and run:
+
+1. There are two ways to compile this project. 
+	a) with sleep times OFF
+	b) with sleep times ON
+
+2. To compile with sleep times OFF, type "make" in the directory where the project files and Makefile is present. 
+3. To compile with sleep times ON, type "make CFLAGS=-DDEBUG" in the directory where the project files and Makefile is present.
+4. Everytime after executing the project with one type of sleep format, execute "make clean" before trying to execute the project with another sleep format
+5. For example if you try to first execute the file with sleep times OFF:
+		a) make clean
+ 		b) make 
+  		c) ./master n 32 (or) ./master  (or) ./master n 128 m 5 (or) any other valid execution command
+
+   Now if you want to try to execute the project with sleep times ON:
+		d) make clean
+		e) make CFLAGS=-DDEBUG
+		f) ./master n 32 (or) ./master  (or) ./master n 128 m 5 (or) any other valid execution command
+
+6. To see the semaphore effect clearly, please use compile with sleep times ON. 
+7. I have 3 separate file master.h, master.c and bin_adder.c for this project. So either can type "make" or "make ALL"
+8. This will generate master.o bin_adder.o and master executable file
+9. Some possible ways to execute: Type ./master -n <num> -m <num>  (make sure to give only powers of 2 as value for -n)
+ 		    ./master 
+		    ./master -h 
+ 		    ./master -n 32 -m 4
+
+10. To see more options supported use: ./master -h
+
+11. Few examples:
+
+	a) ./master -n 32  -> uses default values for m (max num of child that can run concurrently)
+	b) ./master -> uses default values for all. n = 64 and m = 3.
+12. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git_log" 
+
+Note on performance:
+When I executed the project without sleep times, I saw most of the times n/logn method took lesser time to complete than the binary tree method.
+But there were also a few runs when both execution time for binary tree and nlogn were the same(for n = 32 and 64). 
+With the number of integers increasing, clearly n/logn method gives a better performance with lesser execution time. with n = 256, n/logn finished in almost 0.02 or 0.03 seconds but binary tree took about 0.09 seconds
+
+Conclusion: Binary tree and n/logn seems to have same performance for num of integers < 128. 
+But for numbers of integers >= 128, clearly n/logn gives better performance. 
+
+Any known issues: Null

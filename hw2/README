@@ -1,0 +1,24 @@
+Name: Sujatha Gopi
+
+The goal of this project is to use shared memory and multiple processes to determine if a set of numbers are prime.
+This project will use getopt, perror, fork and exec
+
+
+Steps to compile and run:
+
+1. To compile : Type "make" in the directory where the project files and Makefile is present.
+
+2. I have 3 separate file oss.h, oss.c and prime.c for this project. So either can type "make" or "make ALL"
+3. This will generate prime.o oss.o and oss executable file
+4. To execute: Type ./oss -n <num> -b <num> -i <num  (or) ./oss  (or) .oss -h
+5. To see more options supported use: ./oss -h
+
+6. Few examples:
+
+	a) ./oss -b 56 -i 3 -> uses default values for n and s
+
+	b) ./oss -> uses default values for all
+7. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git_log" 
+
+Any known issues: Null

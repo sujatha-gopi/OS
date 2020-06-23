@@ -1,0 +1,27 @@
+Name: Sujatha Gopi
+
+The goal of this project is to simulate the process scheduling part of an operating system. This projevy will implement time-based scheduling,
+ignoring almost every other aspect of the OS and  will be using message queues for synchronization.
+
+Steps to compile and run:
+
+1. To compile : Type "make" in the directory where the project files and Makefile is present.
+2. I have 3 separate file oss.h, oss.c and binary.c for this project. So either can type "make" or "make ALL"
+3. This will generate oss.o binary.o and oss and binary executable file
+4. Some possible ways to execute: Type ./oss
+ 		    ./oss
+		    ./oss -h 
+
+5. To see more options supported use: ./oss -h
+6. This project does not take up anyother command line argument except <-h>i
+7. The log details are kept in file name log.out
+8. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git_log" 
+9. This project will generate 100 processes and use 18 Process control blocks. These are defined in oss.h as NUM_PCB and MAX_PROCESSES
+Note on final report:
+The project displays a mini report on average wait time, average CPU utilization, CPU idle time  and average time a process waited in a blocked
+queue. These results are also added to the log file. 
+
+Notes on Aging: 
+    If any process is CPU starved and keeps dispatching many times as it doesnt get enough CPU time, then this project will increase its queue priority while  calculating its quantum during dispatch. I change this value only for quantum calculation purpose and the process will continue to stay in its original queue itself. And its process priority will also remains the same. Calculating the quantum with higher queue priority for CPU starved process will give it maximum CPU quantum time. So that will give the process a chance to finish. This is how I have implemented aging. 
+Any known issues: Null

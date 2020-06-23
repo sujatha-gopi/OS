@@ -1,0 +1,24 @@
+Name: Sujatha Gopi
+
+This project is to become familiar with the environment in hoare using system calls. I have used perror and getopt in this submission. This project
+will create an executable to perform a breadth first traversal of the directories using a queue and will print the file properties as requested
+
+
+Steps to compile and run:
+
+1. To compile : Type "make" in the directory where the project files and Makefile is present.
+
+2. I have 3 separate file bt.h, bfs.c and bt.c for this project. So either can type "make" or "make ALL"
+3. This will generate bt.o bfs.o and bt executable file
+4. To execute: Type ./bt [dirname]  (or) ./bt  (or) .bt -dpig [dirname]
+5. To see more options supported use: ./bt -h
+
+6. Few examples:
+
+	a) ./bt -dst [dirname] -> Shows last modification, filesize and type of directory and files.
+
+	b) ./bt -L -> Follows symbolic link 
+7. Version control : I have used git for version control. use "git log" to see git commit timeline. 
+I will keep the version control log file in the same folder with name "git log" 
+
+Any known issues: Null

@@ -1,0 +1,48 @@
+commit 07dd676784062e977db6774bb400e08be2aa8abd
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Tue Mar 17 15:05:42 2020 -0500
+
+    1.Final bug fixing
+
+commit 165a5b6bb10a4410726e3c12beabbf79867aeb47
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Tue Mar 17 12:39:40 2020 -0500
+
+    1. Added comments
+    2. Added README
+    3. Updated master.c and bin_adder.c for final changes
+
+commit 4514ba2b0d3021819513c11825aeba87b34e8540
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Mar 16 02:17:03 2020 -0500
+
+    Added -DDEBUG flag to makefile
+    2. Added entry and exit time from critical section in bin_adder.c
+    3. Renamed bin_addr.c to bin_adder.c
+    4. Added code for total time calculation for each summation method in master.c
+    5. Modified getopt to add option to get user input for number of integers
+    6. Added dynamic array to keep track of all children PID
+    7. Added code for signal handling in bin_adder.c
+
+commit 46c8b608ca676dd994675245b196fef94fb49000
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Mar 15 01:26:50 2020 -0500
+
+    1. Added semaphore processing for protecting adder_log file
+    2. Added adder_log file operations and current time calculation
+
+commit b2a00b2fcc01a0be2fa2e298facf354d9830054f
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Fri Mar 13 00:33:32 2020 -0500
+
+    1. Changed Makefile to add a flag for linking log function
+    2. Added processing for binary tree n/2 and n/log n methods in master.c
+    3. Added Shared memory, summation for bin_addr.c
+
+commit e36149f7c73240d9692051117d609d5ce1bd9fc7
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Tue Mar 10 00:00:57 2020 -0500
+
+    1. Added Makefile
+    2. Added code for getopt, signal handling and shared memory
+    3. Added code for generate input file and read file into shared memory

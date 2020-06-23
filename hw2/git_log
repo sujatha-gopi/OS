@@ -1,0 +1,42 @@
+commit e7d29a3c796685387c3f3411ed1ee392108f1237
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Feb 27 09:57:56 2020 -0600
+
+    Added Comments
+
+commit 249296ce2feb722ed25d24646645c94d476dbef3
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Feb 27 08:30:55 2020 -0600
+
+    1. Added code to display the process launch/termination time in output.log
+    2. Added code to display the numbers that are prime/non prime at the end of output log
+    3. Changed the default values for input options
+    4. Added code for child to add the termination time in output.log when receiving SIGINT from parent
+
+commit 2c0a38acae519cbf00c883021c2539be65ca7ae3
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Mon Feb 24 08:09:22 2020 -0600
+
+    1. Corrected the input getopt part
+    2. Added file handling for writing output
+    3. Added code for passing input to prime.c from oss.c
+    4. Corrected code for prime.c to detach SHM during interrupt signal
+    5. Added code for child process to exit if execution time is more than 1 ms
+    6. Added code to check primality of a number
+
+commit c036831a7ec2afe0205607c0518682f2506b936c
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Thu Feb 20 00:36:48 2020 -0600
+
+    1. Added logical clock sec & nanosec
+    2. Added termination function for catching CTRl+C
+    3. Added termination function for program exceeding 2 seconds run time
+    4. Added code for saving the child process numbers, process IDs, etc
+
+commit 192bb78da4b627a631c85b6b5bc5501340514313
+Author: Sujatha Gopi <gopi@hoare7.cs.umsl.edu>
+Date:   Sun Feb 16 00:06:49 2020 -0600
+
+     Created Makefile with two executable
+    2. Added getopt,shared memory allocation, attachment, detachment and shared memory delete code in oss.c
+    3. Added test code in prime.c
